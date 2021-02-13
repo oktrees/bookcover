@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <Container>
-            <LogoBox>BOOK COVER</LogoBox>
+            <LogoBox>C&D 편집디자인</LogoBox>
             <NavBox>
                 <LinkStyled to="/">HOME</LinkStyled>&nbsp;
                 <LinkStyled to="/booklist">BOOKLIST</LinkStyled>&nbsp;
