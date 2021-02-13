@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/bookcover/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/bookcover/static/js/main.48823c19.chunk.js",
+    "main.js.map": "/bookcover/static/js/main.48823c19.chunk.js.map",
+    "runtime-main.js": "/bookcover/static/js/runtime-main.4cd53a8b.js",
+    "runtime-main.js.map": "/bookcover/static/js/runtime-main.4cd53a8b.js.map",
+    "static/css/2.6fa659a6.chunk.css": "/bookcover/static/css/2.6fa659a6.chunk.css",
+    "static/js/2.3837c190.chunk.js": "/bookcover/static/js/2.3837c190.chunk.js",
+    "static/js/2.3837c190.chunk.js.map": "/bookcover/static/js/2.3837c190.chunk.js.map",
+    "static/js/3.bbe903eb.chunk.js": "/bookcover/static/js/3.bbe903eb.chunk.js",
+    "static/js/3.bbe903eb.chunk.js.map": "/bookcover/static/js/3.bbe903eb.chunk.js.map",
+    "index.html": "/bookcover/index.html",
+    "static/css/2.6fa659a6.chunk.css.map": "/bookcover/static/css/2.6fa659a6.chunk.css.map",
+    "static/css/main.8c8b27cf.chunk.css.map": "/bookcover/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.3837c190.chunk.js.LICENSE.txt": "/bookcover/static/js/2.3837c190.chunk.js.LICENSE.txt",
+    "static/media/slick-theme.css": "/bookcover/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4cd53a8b.js",
+    "static/css/2.6fa659a6.chunk.css",
+    "static/js/2.3837c190.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.48823c19.chunk.js"
+  ]
+}
