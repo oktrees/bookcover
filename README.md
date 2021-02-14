@@ -1,5 +1,8 @@
 # bookcover
 <img src="https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/-React.js-61DAFB?logo=React&logoColor=white"/>
+<img src="https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=white"/>
 
 
 책 커버디자인 사이트 입니다
