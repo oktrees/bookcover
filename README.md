@@ -1,5 +1,7 @@
 # bookcover
-<img src="https://img.shields.io/badge/-nodejs-blue?logo=Node.js"/>
+<img src="https://img.shields.io/badge/-nodejs-339933?logo=Node.js&logoColor=white&logoWidth=40"/>
+
+
 책 커버디자인 사이트 입니다
 관리자 로그인을 하여 북리스트게시판에 작업물을 게시 수정 삭제 할수있습니다.
 게시한 작업물들은 메인페이지에 causal로 노출됩니다.
