@@ -43,8 +43,8 @@ const Home = () => {
             dataArr.push(Object.entries(data).map(val => val[1]))
             if(dataArr[0].length === 1){
                 // dataArr[0].unshift({ id: 't15', url: "" })
-                let center = parseInt(window.outerWidth / 300);
-                setSettings(slickSet(false, false, center))
+                let center = parseInt(window.outerWidth / 400);
+                setSettings(slickSet(false, false, 3))
             }
             setBookList(dataArr[0]);
         })
@@ -107,7 +107,7 @@ const ImgageBox = styled.div`
     display: inline-flex;
     margin-left: 80px;
     margin-right: 80px;
-    // width: 50%;
+    // width: 50%;   
 `
 const StyledSlider = styled(Slider)`  
 `;
