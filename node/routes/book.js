@@ -99,7 +99,11 @@ router.delete('/:id', verifyToken, async (req, res) => {
             }))
             .then(async () => {
                 await Book.destroy({ where: { id: req.params.id } })         
-                let data = await Book.findAll()       
+                let data = Book.findAll({
+                    order: [
+                        ['id', 'DESC'],
+                    ],
+                })
                 res.send({ result: true, list: data });
             })
             .catch(error => {

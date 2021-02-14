@@ -30,7 +30,7 @@ const Layout = () => {
             {/* <Button danger rotationTime="15">hello</Button> */}
             {/* <Anchor href="#">go to #</Anchor>  */}
             <Container>   
-                <BrowserRouter basename=''>
+                <BrowserRouter basename='/'>
                     <Header />
                     <Section />
                     <Footer />

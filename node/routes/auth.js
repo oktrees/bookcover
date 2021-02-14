@@ -35,7 +35,7 @@ router.post('/', (req, res, next) => {
             const token = jwt.sign({
                 name: user.name,
             }, process.env.JWT_SECRET, {
-                expiresIn: '180m',
+                expiresIn: '365d',
                 issuer: 'oktree',
             });
 

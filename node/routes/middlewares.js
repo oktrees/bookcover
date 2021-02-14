@@ -24,7 +24,7 @@ exports.verifyToken = (req, res, next) => {
         if (error.name === 'TokenExpiredError') {
             return res.status(419).json({
                 code: 419,
-                message: '토큰이 만료되었습니다.',
+                message: '토큰이 만료되었습니다. 다시 로그인을 해주세요',
             });
         }
         return res.status(401).json({
