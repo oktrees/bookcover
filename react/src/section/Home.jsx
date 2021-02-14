@@ -19,7 +19,7 @@ const slickSet = (infinite = true, autoplay = true,slidesToShow = 1) => {
         focusOnSelect:true,
         autoplay : autoplay,		
         autoplaySpeed : 3000, 	
-        speed: 200,
+        speed: 400,
         pauseOnHover : false,
         draggable : false,
         row: 1,
@@ -102,11 +102,10 @@ const Container = styled.div`
 const Image = styled.img`
     width: auto;
     max-width: 80vw;
-    height: 100%;
-    max-height: 500px;
+    height: 450px;
 `;
 const ImgageBox = styled.div`
-    display: inline-block;
+    display: inline-flex;
     margin-right: 15px;
     // width: 50%;
 `

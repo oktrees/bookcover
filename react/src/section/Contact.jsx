@@ -28,7 +28,7 @@ const Contact = (props) => {
 const Container = styled.div`
     background-color: #F5F3E9;
     height: auto;
-    min-height: calc(100vh - 170px);
+    min-height: calc(100vh - 180px);
     display: grid;
     grid-template-rows: 50px 1fr;
     grid-template-columns: 1fr minmax(auto,800px) 1fr; 
@@ -53,7 +53,7 @@ const Title = styled.div`
 const Contents = styled.div`
     grid-area: 2/2/3/3; 
     width: auto;
-    height:85%;
+    height: 85%;
     margin-top: 10%;
     margin-bottom: 5%;
     max-width: 800px;
