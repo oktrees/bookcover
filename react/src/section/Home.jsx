@@ -5,7 +5,7 @@ import axios from "axios";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const apiurl = 'https://book.oktreeapi.com/';
+const apiurl = 'https://api.cndbook.com/';
 
 const Home = () => {
     const [bookList, setBookList] = useState([]);

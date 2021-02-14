@@ -4,7 +4,7 @@ import axios from "axios";
 import { useCookies } from 'react-cookie';
 import { useHistory } from "react-router-dom";
 
-const apiurl = 'https://book.oktreeapi.com/';
+const apiurl = 'https://api.cndbook.com/';
 
 const Admin = () => {
     const [cookies, setCookie] = useCookies(['auth']);

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 import { useCookies } from 'react-cookie';
 
-const apiurl = 'https://book.oktreeapi.com/';
+const apiurl = 'https://api.cndbook.com/';
 
 const BookListRead = () => {
     const [bookList, setBookList] = useState([]);
@@ -33,6 +33,7 @@ const BookListRead = () => {
         })
         .then(({ data }) => {
             if (data.result) {
+                console.log(data.list);
                 alert('게시글이 삭제되었습니다.')
                 setBookList(data.list)
             }    

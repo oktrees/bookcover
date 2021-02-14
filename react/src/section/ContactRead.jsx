@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from "axios";
 
-const apiurl = 'https://book.oktreeapi.com/';
+const apiurl = 'https://api.cndbook.com/';
 
 const ContactRead = () => {
     const [contact, setContact ] = useState('');
