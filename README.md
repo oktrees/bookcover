@@ -1,7 +1,7 @@
 # bookcover
 <img src="https://img.shields.io/badge/-Node.js-339933?logo=Node.js"/>
 <img src="https://img.shields.io/badge/-React-61DAFB?logo=React&"/>
-<img src="https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/-Node.js-339933?style=flat-squre&logo=Node.js&logoColor=white"/>
 <img src="https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=white"/>
 
 
