@@ -98,6 +98,10 @@ const Container = styled.div`
     margin-top: 8vh;
     z-index: 1;
     overflow: hidden;
+    @media all and (max-width: 767px) {
+        max-height: 550px;
+    }
+    
 `;
 const Image = styled.img`
     width: auto;
