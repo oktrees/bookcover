@@ -28,7 +28,7 @@ const BookList = () => {
 const Container = styled.div`
     background-color: #F5F3E9;
     height: auto;
-    min-height: calc(100vh - 170px);
+    min-height: calc(100vh - 200px);
     margin: auto;
     display: grid;
     grid-template-rows: 50px 1fr;
@@ -41,8 +41,8 @@ const Title = styled.div`
         width: auto;
         max-width: 800px;
         margin: auto;
-        font-weight: 700;
-        font-size: 40px;
+        font-weight: 600;
+        font-size: 35px;
         color: #999;
         display: flex;
         justify-content: space-between;
@@ -56,7 +56,7 @@ const Contents = styled.div`
     width: auto;
     height: 90%;
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
     // background-color: #fff;
     @media (min-width: 768px) and (max-width: 1024px) {
         padding: 0 5%;

@@ -35,7 +35,7 @@ const BookListRead = () => {
             if (data.result) {
                 console.log(data.list);
                 alert('게시글이 삭제되었습니다.')
-                setBookList(data.list)
+                setBookList(data.list.reverse())
             }    
         })
         .catch(e => {  

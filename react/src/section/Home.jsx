@@ -7,6 +7,32 @@ import "slick-carousel/slick/slick-theme.css";
 
 const apiurl = 'https://api.cndbook.com/';
 
+const slickSet = (infinite = true, autoplay = true,slidesToShow = 1) => {
+    return {
+        arrows: false,
+        infinite : infinite, 
+        centerMode: true,
+        centerPadding: "0",
+        slidesToShow: slidesToShow,
+        slidesToScroll: 1,
+        variableWidth: true,
+        focusOnSelect:true,
+        autoplay : autoplay,		
+        autoplaySpeed : 3000, 	
+        speed: 200,
+        pauseOnHover : false,
+        draggable : false,
+        row: 1,
+        // responsive: [            
+        //     { 
+        //         breakpoint: 768,
+        //         settings: {	                  
+        //             slidesToShow:1 
+        //         } 
+        //     }
+        // ]
+    }
+}
 const Home = () => {
     const [bookList, setBookList] = useState([]);
 
@@ -15,9 +41,10 @@ const Home = () => {
         .then(({ data }) => {
             let dataArr = [];
             dataArr.push(Object.entries(data).map(val => val[1]))
-            if(dataArr[0].length !== 1){
-                dataArr[0].push({ id: 't15', url: "" })
-                dataArr[0].push({ id: 't16', url: "" })
+            if(dataArr[0].length === 1){
+                // dataArr[0].unshift({ id: 't15', url: "" })
+                let center = parseInt(window.outerWidth / 300);
+                setSettings(slickSet(false, false, center))
             }
             setBookList(dataArr[0]);
         })
@@ -26,18 +53,7 @@ const Home = () => {
         });
     }, [])
 
-    const settings = {
-        arrows: false,
-        centerMode: true,
-        infinite: false,
-        centerPadding: "0",
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        variableWidth: true,
-        focusOnSelect:true,
-        speed: 200,
-        row: 1        
-    };
+    const [settings, setSettings] = useState(slickSet())
     
 
     const onWheel = (e) => {        
@@ -59,7 +75,9 @@ const Home = () => {
     }
 
     return (
-        <Container onWheel={onWheel} >
+        <Container 
+            // onWheel={onWheel} 
+        >
             {<Slider {...settings}>
                 {bookList.map(item => {
                     return (
@@ -85,6 +103,7 @@ const Image = styled.img`
     width: auto;
     max-width: 80vw;
     height: 100%;
+    max-height: 500px;
 `;
 const ImgageBox = styled.div`
     display: inline-block;

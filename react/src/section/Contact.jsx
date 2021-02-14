@@ -40,8 +40,8 @@ const Title = styled.div`
         width: auto;
         max-width: 800px;
         margin: auto;
-        font-weight: 700;
-        font-size: 40px;
+        font-weight: 600;
+        font-size: 35px;
         color: #999;
         display: flex;
         justify-content: space-between;
@@ -53,9 +53,9 @@ const Title = styled.div`
 const Contents = styled.div`
     grid-area: 2/2/3/3; 
     width: auto;
-    height: 90%;
-    margin-top: 5%;
-    margin-botton: 5%;
+    height:85%;
+    margin-top: 10%;
+    margin-bottom: 5%;
     max-width: 800px;
     // background-color: #fff;
     @media (max-width: 1024px) {

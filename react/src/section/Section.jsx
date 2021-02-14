@@ -31,7 +31,7 @@ const Section = () => {
 const Container = styled.div`
     width: 100%;
     height: 100%;
-    min-height: calc(100vh - 170px);
+    min-height: calc(100vh - 200px);
     margin: auto;
     // display: flex;
     // align-items: center;

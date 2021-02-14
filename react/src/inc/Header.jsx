@@ -5,7 +5,12 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <Container>
-            <LogoBox>C&D 편집디자인</LogoBox>
+            <LogoBox to="/">
+                <span>C</span>
+                <span>&</span>
+                <span>D</span>&nbsp;&nbsp;
+                <span>편집디자인</span>
+            </LogoBox>
             <NavBox>
                 <LinkStyled to="/">HOME</LinkStyled>&nbsp;
                 <LinkStyled to="/booklist">BOOKLIST</LinkStyled>&nbsp;
@@ -27,11 +32,37 @@ const Container = styled.div`
         width: 90%;
     }
 `
-const LogoBox = styled.div`
-    width: 100px;
+const LogoBox = styled(Link)`
+    width: 35%;
     height: 120px;    
     display: flex;
     align-items: center;
+    font-size: 26px;
+    font-family: 'Newsreader', serif;
+    span {
+        font-size: 55px;
+    }
+    span:nth-child(1) {
+        color: #ff986c;
+    }
+    span:nth-child(2) {
+        color: #888;
+    }
+    span:nth-child(3) {
+        color: #ff986c;
+    }
+    span:nth-child(4) {
+        color: #666;
+        font-size: 26px;
+        font-weight: 600;
+        margin-top: 10px;
+        @media (min-width: 768px) and (max-width: 1024px) {
+            font-size:20px;
+        }
+        @media all and (max-width: 767px) {
+            display: none;
+        }
+    }
 `
 const NavBox = styled.div`
     width:60%;
@@ -42,9 +73,9 @@ const NavBox = styled.div`
 `
 const LinkStyled = styled(Link)`
     margin-left: 5%;
-    color: #888;
+    color: #666;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
     &{
         transition: all .1s;
     }

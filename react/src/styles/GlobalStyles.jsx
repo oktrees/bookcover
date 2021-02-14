@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
   ${reset}
   * {
     box-sizing: border-box;
-    font-family: serif, sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
   }
   *:focus {
     outline: 0;
