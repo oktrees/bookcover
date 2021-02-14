@@ -101,12 +101,12 @@ const Container = styled.div`
 `;
 const Image = styled.img`
     width: auto;
-    max-width: 80vw;
     height: 450px;
 `;
 const ImgageBox = styled.div`
     display: inline-flex;
-    margin-right: 15px;
+    margin-left: 80px;
+    margin-right: 80px;
     // width: 50%;
 `
 const StyledSlider = styled(Slider)`  
