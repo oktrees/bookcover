@@ -10,7 +10,7 @@ FE
   skill react
   hosting github pages
 
-
+css react styled
 rest api  
   skill node express
   hosting aws ec2
