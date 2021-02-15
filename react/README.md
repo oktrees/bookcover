@@ -3,8 +3,19 @@
 ### github-pages deploy
 
 react/public/404.html
-```
+```javascript
+...
+var segmentCount = 0; //도메인 = 0, gh-pages 주소는 1
 
+var l = window.location;
+l.replace(
+    l.protocol + '//' + l.hostname + (l.port ?   ':' + l.port : '') +
+    l.pathname.split('/').slice(0, 1 +  segmentCount).join('/') + '/?p=/' +
+    l.pathname.slice(1).split('/').slice  (segmentCount).join('/').replace(/&/g,  '~and~') +
+    (l.search ? '&q=' + l.search.slice(1) .replace(/&/g, '~and~') : '') +
+    l.hash
+);
+...
 ```
 
 ```
