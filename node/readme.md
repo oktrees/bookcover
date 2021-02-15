@@ -13,6 +13,7 @@ JWT_SECRET=
 SEQUELIZE_USERNAME=
 SEQUELIZE_PASSWORD=
 SEQUELIZE_HOST=
+<br/>
 ```
 ### local 사용
 ```
@@ -20,6 +21,7 @@ npm install
 npm start
 ```
 <br/>
+
 ### docker 사용
 ```
 sudo docker build -t {repo 이름}/{image 이름} .
