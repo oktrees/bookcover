@@ -9,7 +9,7 @@
 
 <a href="https://cndbook.com/">cndbook.com</a><br/>
 
-## INFO
+# INFO
 
 * 책 커버 디자인 사이트입니다</br>
 * 관리자 로그인 기능
@@ -19,7 +19,7 @@
 <br/>
 
 
-## SKILL
+# SKILL
 
 > ### FE 
 * js : react
@@ -35,7 +35,7 @@
 
 # SET
 
-## github-pages deploy
+### github-pages deploy
 bookcover/react/public/404.html 파일 <br/>
 segmentCount 도메인적용시 0, gh-pages 주소는 1 설정
 ```javascript
