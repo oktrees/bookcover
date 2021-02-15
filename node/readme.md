@@ -21,8 +21,6 @@ SEQUELIZE_HOST=
 npm install
 npm start
 ```
-<br/>
-
 ### docker 사용
 ```
 sudo docker build -t {repo 이름}/{image 이름} .
