@@ -21,14 +21,14 @@
 ## SKILL
 
 FE 
-* js: react
-* cee: styled-component
-* deployment: github-pages
+* js : react
+* css : styled-component
+* deployment : github-pages
 
 BE
-* restApi: node-express
-* database: mysql-sequelize
-* deployment: aws EC2, RDS, Route53
+* restApi : node-express
+* database : mysql-sequelize
+* deployment : aws EC2, RDS, Route53
   
 <br/>
 <br/>
