@@ -7,7 +7,7 @@
 
 # C&D bookcover site  
 
-<a href="https://cndbook.com/">cndbook.com</a><br/>
+<a href="https://gcleisure.com/">cndbook.com</a><br/>
 
 # INFO
 
