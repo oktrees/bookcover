@@ -1,5 +1,6 @@
+## Set
 
-### .env 파일
+.env 파일
 ```
 COOKIE_SECRET=
 JWT_SECRET=
