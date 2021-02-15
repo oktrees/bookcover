@@ -13,8 +13,9 @@ JWT_SECRET=
 SEQUELIZE_USERNAME=
 SEQUELIZE_PASSWORD=
 SEQUELIZE_HOST=
-<br/>
 ```
+##
+
 ### local 사용
 ```
 npm install
