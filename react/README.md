@@ -1,7 +1,6 @@
 # SET
 
-### github-pages deploy
-
+## github-pages deploy
 bookcover/react/public/404.html 파일 <br/>
 segmentCount 도메인적용시 0, gh-pages 주소는 1 설정
 ```javascript
@@ -20,7 +19,7 @@ l.replace(
 
 ...
 ```
-
+gh-pages branch에 build폴더만 push
 ```
 git add react/build
 
