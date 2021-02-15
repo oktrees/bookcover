@@ -9,16 +9,18 @@
 
 <a href="https://cndbook.com/">cndbook.com</a><br/>
 
-* 책 커버 디자인 사이트입니다</br>
+### 책 커버 디자인 사이트입니다</br>
 * 관리자 로그인을 통해 booklist 탭 게시판에 작업물을 게시, 수정, 삭제 기능<br/>
 * 게시한 작업물들은 메인 페이지에 carousel 노출됩니다.<br/>
 * cantact 탭에서는 회사 소개 글을 수정할 수 있습니다. <br/>
 <br/>
 
 
+### SKILL
+
 FE 
-  skill react
-  hosting github pages
+* skill react
+* hosting github pages
 
 css react styled
 rest api  
@@ -27,18 +29,14 @@ rest api
   
 db 
   mysql ORM sequelize
-  aws rds
-  
+  aws rds  
   
 hosting aws 
 
-
-
-
-
-
 <br/>
 <br/>
 <br/>
+
+
 
 # hosting
