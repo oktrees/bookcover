@@ -39,10 +39,9 @@
 새폴더에서
 ```
 git clone https://github.com/oktrees/bookcover.git ./
-cd node
 ```
 
-.env 파일생성
+node폴더에 .env 파일생성
 ```
 COOKIE_SECRET=
 JWT_SECRET=
