@@ -28,10 +28,9 @@ FE
 BE
 * restApi : node-express
 * database : mysql-sequelize
-* deployment : aws EC2, RDS, Route53
+* deployment : aws EC2, RDS, Route53, Docker
   
 <br/>
 <br/>
 <br/>
 
-# hosting
