@@ -1,4 +1,4 @@
-## Docker로 set
+## set
 
 새폴더에서
 ```
@@ -14,7 +14,13 @@ SEQUELIZE_USERNAME=
 SEQUELIZE_PASSWORD=
 SEQUELIZE_HOST=
 ```
-docker build
+> ### local 사용
+```
+npm install
+npm start
+```
+
+> ### docker 사용
 ```
 sudo docker build -t {repo 이름}/{image 이름} .
 sudo docker run --name {container 이름} -d -p{사용할포트번호}:3000 {repo 이름}/{image 이름}
