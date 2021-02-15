@@ -1,6 +1,6 @@
 # SET
 
-### github-pages deployment
+### github-pages deploy
 
 ```
 git add react/build
