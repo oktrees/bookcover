@@ -2,9 +2,11 @@
 
 ### github-pages deploy
 
-react/public/404.html
+bookcover/react/public/404.html 파일 <br/>
+segmentCount 도메인적용시 0, gh-pages 주소는 1 설정
 ```javascript
 ...
+
 var segmentCount = 0; //도메인 = 0, gh-pages 주소는 1
 
 var l = window.location;
@@ -15,6 +17,7 @@ l.replace(
     (l.search ? '&q=' + l.search.slice(1) .replace(/&/g, '~and~') : '') +
     l.hash
 );
+
 ...
 ```
 
