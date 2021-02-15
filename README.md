@@ -34,7 +34,7 @@
 
 # SET
 
-> ### server
+> ## server
 
 새폴더에서
 ```
@@ -68,7 +68,7 @@ sudo docker run --name nodeweb -d -p3000:3000 oktrees/nodeweb
 ```
 <br/>
 
-> ### github-pages deploy
+> ## github-pages deploy
 react/public/404.html 파일 <br/>
 segmentCount 도메인적용시 0, gh-pages 주소는 1 설정
 ```javascript
