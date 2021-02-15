@@ -21,7 +21,7 @@
 
 ## SKILL
 
-> ## FE 
+> ### FE 
 * js : react
 * css : styled-component
 * deployment : github-pages
