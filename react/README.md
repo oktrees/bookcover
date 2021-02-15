@@ -2,6 +2,11 @@
 
 ### github-pages deploy
 
+react/public/404.html
+```
+
+```
+
 ```
 git add react/build
 
