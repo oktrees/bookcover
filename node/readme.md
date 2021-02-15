@@ -16,12 +16,12 @@ SEQUELIZE_HOST=
 ```
 ##
 
-### local 사용
+### local에서 start
 ```
 npm install
 npm start
 ```
-### docker 사용
+### docker에서 start
 ```
 sudo docker build -t {repo 이름}/{image 이름} .
 sudo docker run --name {container 이름} -d -p{사용할포트번호}:3000 {repo 이름}/{image 이름}
