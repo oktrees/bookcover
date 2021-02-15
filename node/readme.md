@@ -1,4 +1,4 @@
-## Docker로 Set
+## Docker로 set
 
 새폴더에서
 ```
