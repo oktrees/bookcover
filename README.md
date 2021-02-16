@@ -69,8 +69,8 @@ sudo docker run --name nodeweb -d -p3000:3000 oktrees/nodeweb
 ##
 
 > ### github-pages deploy
-react/public/404.html 파일 <br/>
-segmentCount 도메인적용시 0, gh-pages 주소는 1 설정
+react/public/404.html 파일 redirect 설정 <br/>
+segmentCount 도메인적용시 0, gh-pages 주소는 1
 ```javascript
 ...
 
