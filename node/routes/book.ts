@@ -9,16 +9,16 @@ import Book from '../models/book';
 const router = express.Router();
 
 try {
-    fs.readdirSync(path.join(__dirname, 'uploads'));
+    fs.readdirSync('uploads');
 } catch (error) {
     console.error('uploads 폴더가 없어 uploads 폴더를 생성합니다.');
-    fs.mkdirSync(path.join(__dirname, 'uploads'));
+    fs.mkdirSync('uploads');
 }
 
 const upload = multer({
     storage: multer.diskStorage({
         destination(req, file, done) {
-            done(null, path.join(__dirname, 'uploads/'));
+            done(null, 'uploads/');
         },
         filename(req, file, done) {
             const ext = path.extname(file.originalname);
