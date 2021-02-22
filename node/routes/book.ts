@@ -1,18 +1,12 @@
-const express= require('express');
-const multer = require('multer');
-const path = require('path');
-const fs = require('fs');
-const cors = require('cors');
+import express from 'express';
+import multer from 'multer';
+import path from 'path';
+import fs from 'fs';
 
-const { verifyToken  } = require('./middlewares');
-const { Book } = require('../models');
+import { verifyToken } from './middlewares';
+import Book from '../models/book';
 
 const router = express.Router();
-
-router.use(cors({
-    credentials: true,
-    // origin: 주소를 써주면 해당 주소만허용, 기본값 *
-}))
 
 try {
     fs.readdirSync('uploads');
@@ -48,16 +42,21 @@ router.get('/', (req, res) => {
         })
 });
 
+interface Ifile {
+    [key: string] :[Express.Multer.File]
+}
+
 router.post('/', 
     verifyToken, 
     upload.fields([{ name: 'file1'}, { name: 'file2'}]), 
     async (req, res) => {
     try {
+        const files = req.files as Ifile
         await Book.create({
             title: req.body.title,
             contents: req.body.contents,
-            frontimg: req.files.file1 && req.files.file1[0].filename,
-            backimg : req.files.file2 && req.files.file2[0].filename,
+            frontimg: files['file1'] && files['file1'][0].filename,
+            backimg : files['file2'] && files['file2'][0].filename,
         });
         
         res.send(true);
@@ -70,12 +69,15 @@ router.patch('/:id',
     verifyToken, 
     upload.fields([{ name: 'file1'}, { name: 'file2'}]), 
     async (req, res) => {
+    const files = req.files as Ifile
     const dataObj = {
         title: req.body.title,
         contents: req.body.contents,
+        frontimg : '',
+        backimg : '',
     }
-    if (req.files.file1) dataObj.frontimg = req.files.file1[0].filename
-    if (req.files.file2) dataObj.backimg = req.files.file2[0].filename
+    if (files['file1']) dataObj.frontimg = files['file1'][0].filename
+    if (files['file2']) dataObj.backimg = files['file2'][0].filename
 
     await Book.update(dataObj,{ where: { id: req.params.id } });
     
@@ -84,19 +86,42 @@ router.patch('/:id',
 // , (error) => {
 //     if (error) return error;
 //     return true;
-// }
+
 
 router.delete('/:id', verifyToken, async (req, res) => {
     try {
-        const bookData = await Book.findAll({
+        const bookData = await Book.findOne({
             where: { id: req.params.id}
         })  
         let filePath ='';
-        Promise.all(['frontimg', 'backimg'].map((val) => {
-                if (!bookData[0][val]) return;
-                filePath = path.join(__dirname, '/../uploads', bookData[0][val]);
-                return fs.promises.unlink(filePath);
-            }))
+        Promise.all([
+                () => {
+                    if(bookData){
+                        if (!bookData.frontimg) return;
+                        filePath = path.join(__dirname, '/../uploads', bookData.frontimg);
+                        return fs.promises.unlink(filePath);
+                    }
+                    return;
+                },
+                () => {
+                    if(bookData){
+                        if (!bookData.backimg) return;
+                        filePath = path.join(__dirname, '/../uploads', bookData.backimg);
+                        return fs.promises.unlink(filePath);
+                    }
+                    return;
+                },
+                
+            ]
+            // ['frontimg', 'backimg'].map((val) => {
+            //     if(bookData){
+            //         if (!bookData[val]) return;
+            //         filePath = path.join(__dirname, '/../uploads', bookData[val]);
+            //         return fs.promises.unlink(filePath);
+            //     }
+            //     return;
+            // })
+            )
             .then(async () => {
                 await Book.destroy({ where: { id: req.params.id } })         
                 let data = await Book.findAll({
@@ -134,7 +159,6 @@ router.get('/limit/:number', (req, res) => {
         ],
     })
         .then((data) => {
-            console.log(data);
             res.send(data);
         })
         .catch((error) => {
@@ -142,8 +166,8 @@ router.get('/limit/:number', (req, res) => {
         })
 });
 
-router.get('/uploads', (req, res) => {
-    fs.readFile()
-});
+// router.get('/uploads', (req, res) => {
+//     fs.readFile()
+// });
 
-module.exports = router;
+export default router;

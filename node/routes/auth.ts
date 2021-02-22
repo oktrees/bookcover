@@ -1,28 +1,23 @@
-const express= require('express');
-const passport = require('passport');
-const jwt = require('jsonwebtoken');
-const cors = require('cors');
+import express from 'express';
+import passport from 'passport';
+import jwt from 'jsonwebtoken';
 
-const { verifyToken  } = require('./middlewares');
-const { User } = require('../models');
+import { verifyToken } from './middlewares';
+import User from '../models/user';
 
 const router = express.Router();
 
-router.use(cors({
-    credentials: true,
-    // origin: 주소를 써주면 해당 주소만허용, 기본값 *
-}))
 
 router.get('/', async (req, res) => {
-    let data = await User.findAll({ attributes: ['contact'] }, { where: { id: 1 } })
+    let data = await User.findAll({ attributes: ['contact'], where: { id: 1 } })
     res.send(data[0]);
 });
 
 router.post('/', (req, res, next) => {
-    passport.authenticate('local', (authError, user, info) => {
-        if (authError) {
-            console.error(authError);
-            return next(authError);
+    passport.authenticate('local', (userError, user, info) => {
+        if (userError) {
+            console.error(userError);
+            return next(userError);
         }
         if (!user) {
             return res.send({ result: false, message: info.message });
@@ -34,7 +29,7 @@ router.post('/', (req, res, next) => {
             }
             const token = jwt.sign({
                 name: user.name,
-            }, process.env.JWT_SECRET, {
+            }, process.env.JWT_SECRET!, {
                 expiresIn: '365d',
                 issuer: 'oktree',
             });
@@ -49,9 +44,9 @@ router.post('/', (req, res, next) => {
 });
 
 router.patch('/', verifyToken, async (req, res) => {
-    let data = await User.findAll({ attributes: ['contact'] }, { where: { id: 1 } })
+    let data = await User.findAll({ attributes: ['contact'], where: { id: 1 } })
     await User.update(req.body,{ where: { id: 1 } });
     res.send(true);
 });
 
-module.exports = router;
+export default router;

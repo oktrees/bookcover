@@ -1,6 +1,7 @@
-const jwt = require('jsonwebtoken');
+import { NextFunction, Request, Response } from 'express';
+import jwt from 'jsonwebtoken';
 
-exports.isLoggedIn = (req, res, next) => {
+const isLoggedIn = (req: Request, res: Response, next: NextFunction) => {
     if (req.isAuthenticated()) {
         next();
     } else {
@@ -8,17 +9,18 @@ exports.isLoggedIn = (req, res, next) => {
     }
 };
 
-exports.isNotLoggedIn = (req, res, next) => {
+const isNotLoggedIn = (req: Request, res: Response, next: NextFunction) => {
     if (!req.isAuthenticated()) {
         next();
     } else {
         res.redirect('/');
     }
 };
-
-exports.verifyToken = (req, res, next) => {
+ 
+const verifyToken = (req: Request, res: Response, next: NextFunction) => {
     try {
-        req.decoded = jwt.verify(req.headers.authorization, process.env.JWT_SECRET);
+
+        jwt.verify(req.headers.authorization!, process.env.JWT_SECRET!);
         return next();
     } catch (error) {
         if (error.name === 'TokenExpiredError') {
@@ -33,3 +35,5 @@ exports.verifyToken = (req, res, next) => {
         })
     }
 }
+
+export { isLoggedIn, isNotLoggedIn, verifyToken };
