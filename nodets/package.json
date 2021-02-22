@@ -4,8 +4,9 @@
   "description": "bookcover site",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && cross-env NODE_ENV=production PORT=3000 pm2-runtime dist/index.js --env pruduction",
-    "dev": "cross-env NODE_ENV=production nodemon index.ts --env pruduction"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=production PORT=3000 pm2-runtime app.js --env pruduction",
+    "dev": "nodemon index.ts"
   },
   "author": "oktree",
   "license": "MIT",
