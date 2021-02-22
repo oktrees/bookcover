@@ -26,7 +26,7 @@
 * deployment : github-pages
 
 > ### BE
-* restApi : node-express
+* restApi : node-express, typescript
 * database : mysql-sequelize
 * deployment : aws EC2, RDS, Route53, Docker
 
