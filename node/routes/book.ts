@@ -69,19 +69,22 @@ router.patch('/:id',
     verifyToken, 
     upload.fields([{ name: 'file1'}, { name: 'file2'}]), 
     async (req, res) => {
-    const files = req.files as Ifile
-    const dataObj = {
-        title: req.body.title,
-        contents: req.body.contents,
-        frontimg : '',
-        backimg : '',
-    }
-    if (files['file1']) dataObj.frontimg = files['file1'][0].filename
-    if (files['file2']) dataObj.backimg = files['file2'][0].filename
+        const bookData = await Book.findOne({
+            where: { id: req.params.id}
+        })  
+        const files = req.files as Ifile
+        const dataObj = {
+            title: req.body.title,
+            contents: req.body.contents,
+            frontimg : bookData!.frontimg,
+            backimg : bookData!.backimg,
+        }
+        if (files['file1']) dataObj.frontimg = files['file1'][0].filename
+        if (files['file2']) dataObj.backimg = files['file2'][0].filename
 
-    await Book.update(dataObj,{ where: { id: req.params.id } });
-    
-    res.send(true);
+        await Book.update(dataObj,{ where: { id: req.params.id } });
+        
+        res.send(true);
 });
 // , (error) => {
 //     if (error) return error;
