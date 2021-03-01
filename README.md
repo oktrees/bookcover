@@ -34,7 +34,7 @@
 
 > ### server
 
-새폴더에서
+프로젝트폴더에서
 ```
 git clone https://github.com/oktrees/bookcover.git ./
 ```
