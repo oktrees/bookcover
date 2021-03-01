@@ -19,12 +19,10 @@ const Admin = () => {
       .post(apiurl + 'auth', data)
       .then(({ data }) => {
         if (data.code === 200) {
-          console.log(data);
           setCookie('auth', data.token, { path: '/' });
           alert('로그인이 되었습니다.');
           history.push("/");
         } else {
-          console.log(data);
           alert(data.message)
         }
       })

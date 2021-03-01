@@ -6,23 +6,6 @@ import thunkMiddleware from 'redux-thunk'
 import contactsReducer from './contacts';
 import booksReducer from './books';
 
-const INCREMENT = "INCREMENT";
-
-const book = (state = '', action) => {
-  switch (action.type) {
-    default: 
-      return state;
-  }
-}
-
-const constant = (state = '', action) => {
-  switch (action.type) {
-    default: 
-      return state;
-  }
-}
-
-
 const reducer = combineReducers({
   contacts: contactsReducer,
   books: booksReducer,

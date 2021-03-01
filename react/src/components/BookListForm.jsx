@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useHistory } from "react-router-dom";
-import { useCookies } from 'react-cookie';
 import { connect } from "react-redux";
 import { booksActions } from "../store/books";
 
@@ -9,8 +8,6 @@ import { booksActions } from "../store/books";
 const BookListForm = ({ match, getBook, createBook, updateBook, books}) => {
 	const [title, setTitle] = useState('');
 	const [contents, setContents] = useState('');
-
-	const [cookies, setCookie] = useCookies(['auth']);
 
 	const param = match.params.name;
 	const history = useHistory();
