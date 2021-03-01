@@ -1,6 +1,6 @@
 const theme = {
-    mainColor: 'yellow',
-    successColor: 'blue',
+  mainColor: '#',
+  successColor: '#',
 }
 
 export default theme;
