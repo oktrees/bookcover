@@ -32,7 +32,7 @@ const logger = createLogger();
 
 const store = createStore(
   reducer, 
-  composeWithDevTools(applyMiddleware(thunkMiddleware, logger))
+  composeWithDevTools(applyMiddleware(thunkMiddleware))
 );
 
 export default store;

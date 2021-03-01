@@ -4,13 +4,13 @@ import jwt from 'jsonwebtoken';
 
 import { verifyToken } from './middlewares';
 import User from '../models/user';
-
+ 
 const router = express.Router();
 
 
 router.get('/', async (req, res) => {
     let data = await User.findAll({ attributes: ['contact'], where: { id: 1 } })
-    res.send(data[0]);
+    res.send(data[0]); 
 });
 
 router.post('/', (req, res, next) => {
