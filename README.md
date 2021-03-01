@@ -21,7 +21,7 @@
 # SKILL
 
 > ### FE 
-* js : react
+* js : react, redux
 * css : styled-component
 * deployment : github-pages
 
